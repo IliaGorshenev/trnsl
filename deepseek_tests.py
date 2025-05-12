@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import datetime
-import re # For parsing the output
+import re # pip install torch transformers bitsandbytes accelerate sentencepiece For parsing the output
 
 # --- Configuration ---
 # 1. SELECT DEEPSEEK MODEL (REPLACE THIS WITH YOUR CHOSEN DEEPSEEK MODEL)
@@ -321,6 +321,8 @@ with open(report_filename, "w", encoding="utf-8") as f:
         # f.write(f"---------------------------------------------------\n")
         # f.write(f"Prompt Preview: {log_entry['prompt_text_preview']}\n")
         # f.write(f"Full Output Preview: {log_entry['full_model_output_preview']}\n")
+        
         f.write(f"===================================================\n")
 
 print(f"\n--- Отчет сохранен в файл: {report_filename} ---")
+
